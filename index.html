@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Югославия 1918–1939 · Внутренняя политика</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Дополнительные стили для теста */
+        .test-section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .quiz-form {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(5px);
+            margin-top: 2rem;
+        }
+        .question {
+            margin-bottom: 1.8rem;
+            padding: 1rem;
+            border-left: 3px solid var(--burgundy);
+            background: rgba(0,0,0,0.2);
+            border-radius: 0 10px 10px 0;
+        }
+        .question p {
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+        }
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+        .option input {
+            accent-color: var(--gold);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        .option label {
+            cursor: pointer;
+        }
+        .btn-check {
+            margin-top: 2rem;
+            text-align: center;
+        }
+        .result-message {
+            margin-top: 2rem;
+            font-size: 1.4rem;
+            text-align: center;
+            color: var(--gold);
+        }
+        .correct {
+            background-color: rgba(0, 128, 0, 0.2);
+            border-left-color: #00aa00;
+        }
+        .incorrect {
+            background-color: rgba(255, 0, 0, 0.1);
+            border-left-color: #aa0000;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Hero секция -->
+        <section class="hero" style="padding: 4rem 0 2rem;">
+            <div class="container">
+                <h1 class="hero-title">Внутренняя политика <span class="gold">Югославии</span></h1>
+                <p class="hero-subtitle">1918–1939 · Королевство сербов, хорватов и словенцев (КСХС) → Югославия</p>
+            </div>
+        </section>
+
+        <!-- Вертикальный список слайдов -->
+        <section class="projects" style="padding-top: 0;">
+            <div class="container slides-vertical">
+
+                <!-- 1. Национальный состав, религия, экономика -->
+                <div class="stage-card fade-in">
+                    <h3>Мозаика народов</h3>
+                    <img class="stage-photo" src="map1.png" alt="Национальный состав: карта">
+                    <div class="stage-description">
+                        <p><strong>Национальный состав:</strong> сербы ~39%, хорваты ~24%, словенцы ~8%, бошняки ~6%, остальные (албанцы, немцы, венгры, македонцы) ~23%.</p>
+                        <p><strong>Религия:</strong> православие ~46%, католичество ~39%, ислам ~11%.</p>
+                        <p><strong>Экономика:</strong> разрыв между севером (индустриальная Словения, Хорватия) и югом (аграрная Сербия, Македония) — до 40%.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Две концепции: федерализм vs унитаризм -->
+                <div class="stage-card fade-in">
+                    <h3>Две концепции устройства</h3>
+                    <img class="stage-photo" src="var.jpeg" alt="Две концепции: унитаризм и федерализм">
+                    <div class="stage-description">
+                        <p><span class="gold">Унитаризм (централизм):</span> только сильная власть из Белграда удержит страну. Сторонники: сербские элиты (Н. Пашич), офицерство.</p>
+                        <p><span class="burgundy">Федерализм (автономия):</span> страх ассимиляции, требование сохранить исторические права. Сторонники: Хорватская крестьянская партия (С. Радич), словенские клерикалы.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Временное правительство: сербское доминирование -->
+                <div class="stage-card fade-in">
+                    <h3>Временное правительство (1918–1920)</h3>
+                    <img class="stage-photo" src="nik.jpeg" alt="Никола Пашич">
+                    <div class="stage-description">
+                        <p>У Сербии — готовая армия, администрация, дипломатия. Из 16 министров — 10 сербы, 4 хорвата, 2 словенца. Ключевые портфели (армия, МВД, финансы) — у сербов.</p>
+                        <p>Унификация налогов, таможни, почты по сербским образцам.</p>
+                    </div>
+                </div>
+
+                <!-- 4. Видовданская конституция -->
+                <div class="stage-card fade-in">
+                    <h3>Видовданская конституция (28 июня 1921)</h3>
+                    <img class="stage-photo" src="lol.jpeg" alt="Голосование в Скупщине">
+                    <div class="stage-description">
+                        <p><strong>Голосование:</strong> За – 223 (сербские партии + боснийские мусульмане), Против – 35 (словенские клерикалы), Воздержались – 158 (бойкот хорватов и коммунистов).</p>
+                        <p>Жёсткий централизм: 33 области, исторические границы стёрты. Хорватия не признаёт конституцию.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Убийство Степана Радича -->
+                <div class="stage-card fade-in">
+                    <h3>Убийство Степана Радича (1928)</h3>
+                    <img class="stage-photo" src="rad.webp" alt="Степан Радич">
+                    <div class="stage-description">
+                        <p>70% налогов из Хорватии уходит в Белград. 20 июня 1928 сербский депутат Рачич стреляет в хорватских депутатов в парламенте. Убит Степан Радич и двое его соратников.</p>
+                        <p>Хорваты покидают Белград, страна на грани гражданской войны.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Диктатура 6 января 1929 -->
+                <div class="stage-card fade-in">
+                    <h3>Диктатура 6 января 1929</h3>
+                    <img class="stage-photo" src="kon.jpeg" alt="Король Александр">
+                    <div class="stage-description">
+                        <p><strong>Причина:</strong> паралич парламента, угроза распада. Король и генералитет решили: «демократия не работает».</p>
+                        <p><strong>Меры:</strong> роспуск Скупщины, запрет партий, отмена конституции. Идеология «интегральный югославизм» — один народ с тремя племенами. Октябрь 1929: переименование в Королевство Югославия.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Бановины (1929–1931) -->
+                <div class="stage-card fade-in">
+                    <h3>Бановины — перекройка карты</h3>
+                    <img class="stage-photo" src="map2.png" alt="Карта бановин">
+                    <div class="stage-description">
+                        <p>Цель: стереть исторические названия (Сербия, Хорватия, Словения). 9 бановин, названных по рекам. В 5 из 9 сербы — большинство. Сербы чувствуют себя хозяевами, хорваты — запертыми.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Внешний фактор и убийство короля (1934) -->
+                <div class="stage-card fade-in">
+                    <h3>Внешний фактор и убийство короля</h3>
+                    <img class="stage-photo" src="fra" alt="Памятник благодарности Франции">
+                    <div class="stage-description">
+                        <p>1931: Октроированная конституция (под давлением Франции). 9 октября 1934 король Александр убит в Марселе. Теракт организован усташами при поддержке Италии и Венгрии.</p>
+                        <p>Внешние враги использовали внутреннее недовольство хорватов.</p>
+                    </div>
+                </div>
+
+                <!-- 9. Регентство Павла (1934–1939) -->
+                <div class="stage-card fade-in">
+                    <h3>Регентство Павла</h3>
+                    <img class="stage-photo" src="museum.jpeg" alt="Князь Павел">
+                    <div class="stage-description">
+                        <p>Регент Павел при малолетнем Петре II идёт на компромисс: ослабление цензуры, диалог с хорватским лидером Владко Мачеком.</p>
+                        <p>Fun fact: создал крупнейший музей Югославии.</p>
+                    </div>
+                </div>
+
+                <!-- 10. Культура как зеркало политики -->
+                <div class="stage-card fade-in">
+                    <h3>Культура как зеркало политики</h3>
+                    <img class="stage-photo" src="bro.jpeg" alt="Памятник косовским героям">
+                    <div class="stage-description">
+                        <p><strong>Официальная пропаганда:</strong> памятники династии по всей стране — попытка «зацементировать» единство.</p>
+                        <p><strong>Сербская идея:</strong> памятники косовским героям.</p>
+                        <p><strong>Хорватское сопротивление:</strong> «наивное искусство», крестьянские хоры.</p>
+                    </div>
+                </div>
+
+                <!-- 11. Демография (итог) -->
+                <div class="stage-card fade-in">
+                    <h3>Демография (ничего не изменилось)</h3>
+                    <img class="stage-photo" src="nah.jpeg" alt="Диаграмма населения">
+                    <div class="stage-description">
+                        <p>сербы ~40%, хорваты ~23%, остальные ~37%.</p>
+                    </div>
+                </div>
+
+                <!-- 12. Политический итог -->
+                <div class="stage-card fade-in">
+                    <h3>Главная причина краха</h3>
+                    <img class="stage-photo" src="lol.jpeg" alt="Разочарование">
+                    <div class="stage-description">
+                        <p>Унитаризм (1921–1939) проиграл — не смог ассимилировать хорватов. Федерализм (1939) победил частично, но создал новые конфликты с сербами.</p>
+                        <p><strong>Итог:</strong> игнорирование национальных чувств, попытка построить государство на доминировании одной группы.</p>
+                    </div>
+                </div>
+
+                <!-- 13. Цитата Николая II -->
+                <div class="stage-card fade-in">
+                    <h3>«Все мои усилия...»</h3>
+                    <img class="stage-photo" src="niko.jpeg" alt="Николай II">
+                    <div class="stage-description">
+                        <p>«Все мои усилия будут направлены к соблюдению достоинства Сербии… Ни в коем случае Россия не останется равнодушной к судьбе Сербии». (Из телеграммы Николая II королю Сербии Александру Карагеоргиевичу, июль 1914)</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Благодарность -->
+        <section class="contact" style="padding: 3rem 0;">
+            <div class="container">
+                <div class="contact-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h2 class="section-title" style="display: block; text-align: center;">Спасибо за внимание!</h2>
+                    <p style="color: var(--text-primary); font-size: 1.4rem;">«I have no enemies» — Марк А. А.</p>
+                    <div style="margin-top: 2rem;">
+                        <span class="gold">Вопросы?</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Тест на 10 вопросов -->
+        <section class="test-section">
+            <div class="container">
+                <h2 class="section-title" style="text-align: center;">Проверьте свои знания</h2>
+                <div class="quiz-form" id="quiz">
+                    <!-- вопросы будут сгенерированы скриптом -->
+                </div>
+                <div class="btn-check">
+                    <button class="btn-primary" id="checkQuiz">Проверить ответы</button>
+                </div>
+                <div class="result-message" id="quizResult"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 · Материалы по истории Югославии · Презентация Марка Андреева</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно для изображений -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <div class="modal-content" id="modalContent"></div>
+    </div>
+
+    <script>
+        (function() {
+            // Анимация появления
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('.fade-in').forEach(function(el) {
+                observer.observe(el);
+            });
+
+            // Модальное окно для фото
+            const modal = document.getElementById('imageModal');
+            const modalContent = document.getElementById('modalContent');
+            const closeBtn = document.querySelector('.modal-close');
+            const photoElements = document.querySelectorAll('.stage-photo');
+
+            function openModal(imageUrl) {
+                modalContent.style.backgroundImage = `url('${imageUrl}')`;
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+
+            photoElements.forEach(function(photo) {
+                photo.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const imageUrl = this.src;
+                    openModal(imageUrl);
+                });
+            });
+
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) closeModal();
+            });
+
+            window.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.style.display === 'flex') {
+                    closeModal();
+                }
+            });
+
+            // Тест
+            const questions = [
+                {
+                    question: 'Какой примерно процент населения составляли сербы в 1918-1939 гг.?',
+                    options: ['~39%', '~50%', '~30%', '~45%'],
+                    correct: 0
+                },
+                {
+                    question: 'Какая партия представляла интересы хорватов?',
+                    options: ['Хорватская крестьянская партия', 'Социал-демократическая партия', 'Партия права', 'Коммунистическая партия'],
+                    correct: 0
+                },
+                {
+                    question: 'В каком году была принята Видовданская конституция?',
+                    options: ['1918', '1921', '1929', '1931'],
+                    correct: 1
+                },
+                {
+                    question: 'Кто убил Степана Радича?',
+                    options: ['сербский депутат Рачич', 'король Александр', 'агенты усташей', 'албанские националисты'],
+                    correct: 0
+                },
+                {
+                    question: 'Когда была установлена диктатура короля Александра?',
+                    options: ['6 января 1929', '1 декабря 1918', '20 июня 1928', '9 октября 1934'],
+                    correct: 0
+                },
+                {
+                    question: 'Сколько бановин было создано в 1929-1931 гг.?',
+                    options: ['7', '9', '12', '5'],
+                    correct: 1
+                },
+                {
+                    question: 'Где был убит король Александр?',
+                    options: ['в Белграде', 'в Загребе', 'в Марселе', 'в Париже'],
+                    correct: 2
+                },
+                {
+                    question: 'Кто был регентом при малолетнем Петре II?',
+                    options: ['Павел Карагеоргиевич', 'Никола Пашич', 'Владко Мачек', 'Степан Радич'],
+                    correct: 0
+                },
+                {
+                    question: 'Какая идеология была объявлена в период диктатуры?',
+                    options: ['интегральный югославизм', 'панславизм', 'великосербский национализм', 'коммунизм'],
+                    correct: 0
+                },
+                {
+                    question: 'Кто из российских императоров обещал поддержку Сербии в 1914 г.?',
+                    options: ['Николай I', 'Александр II', 'Николай II', 'Александр III'],
+                    correct: 2
+                }
+            ];
+
+            const quizContainer = document.getElementById('quiz');
+            function renderQuiz() {
+                let html = '';
+                questions.forEach((q, idx) => {
+                    html += `<div class="question" data-q="${idx}">`;
+                    html += `<p>${idx+1}. ${q.question}</p>`;
+                    html += `<div class="options">`;
+                    q.options.forEach((opt, optIdx) => {
+                        html += `<div class="option">`;
+                        html += `<input type="radio" name="q${idx}" value="${optIdx}" id="q${idx}o${optIdx}">`;
+                        html += `<label for="q${idx}o${optIdx}">${opt}</label>`;
+                        html += `</div>`;
+                    });
+                    html += `</div></div>`;
+                });
+                quizContainer.innerHTML = html;
+            }
+            renderQuiz();
+
+            document.getElementById('checkQuiz').addEventListener('click', function() {
+                let correctCount = 0;
+                questions.forEach((q, idx) => {
+                    const selected = document.querySelector(`input[name="q${idx}"]:checked`);
+                    const questionDiv = document.querySelector(`.question[data-q="${idx}"]`);
+                    questionDiv.classList.remove('correct', 'incorrect');
+                    if (selected) {
+                        const answer = parseInt(selected.value);
+                        if (answer === q.correct) {
+                            questionDiv.classList.add('correct');
+                            correctCount++;
+                        } else {
+                            questionDiv.classList.add('incorrect');
+                        }
+                    } else {
+                        questionDiv.classList.add('incorrect');
+                    }
+                });
+                document.getElementById('quizResult').innerHTML = `Правильных ответов: ${correctCount} из 10`;
+            });
+        })();
+    </script>
+</body>
+</html>
